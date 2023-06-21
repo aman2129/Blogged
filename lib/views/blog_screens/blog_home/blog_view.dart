@@ -43,7 +43,10 @@ class _BlogViewState extends State<BlogView> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        title: const Text('Blogged',style: TextStyle(color: Colors.black),),
+        title: const Text(
+          'Blogged',
+          style: TextStyle(color: Colors.black),
+        ),
       ),
       body: BlocListener<InternetBloc, InternetState>(
         listener: (context, state) {
@@ -81,8 +84,7 @@ class _BlogViewState extends State<BlogView> {
               );
             } else if (snapshot.hasData) {
               List blogList = snapshot.data.docs
-                  .map((e) =>
-                  BlogDataModel(
+                  .map((e) => BlogDataModel(
                       imageUrl: e['imageUrl'],
                       title: e['title'],
                       desc: e['desc'],
@@ -105,20 +107,19 @@ class _BlogViewState extends State<BlogView> {
                       return const Center(child: CircularProgressIndicator());
                     case BlogLoadedSuccessState:
                       return ValueListenableBuilder(
-                        valueListenable: Hive.box('bookmark').listenable(),
-                        builder: (context, box, _) {
-                          return ListView.builder(
-                            physics: const AlwaysScrollableScrollPhysics(
-                                parent: BouncingScrollPhysics()),
-                            itemCount: blogList.length,
-                            itemBuilder: (context, index) {
-                              return BlogTile(
-                                blogDataModel: blogList[index],
-                              );
-                            },
-                          );
-                        }
-                      );
+                          valueListenable: Hive.box('bookmark').listenable(),
+                          builder: (context, box, _) {
+                            return ListView.builder(
+                              physics: const AlwaysScrollableScrollPhysics(
+                                  parent: BouncingScrollPhysics()),
+                              itemCount: blogList.length,
+                              itemBuilder: (context, index) {
+                                return BlogTile(
+                                  blogDataModel: blogList[index],
+                                );
+                              },
+                            );
+                          });
                     case BlogErrorState:
                       return const Scaffold(
                         body: Center(
