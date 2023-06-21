@@ -1,10 +1,6 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
-import 'package:blog_app/services/firestore_data.dart';
-import 'package:blog_app/views/blog_screens/delete_dialog.dart';
-import 'package:blog_app/views/blog_screens/drawer/bookmark_list_tile.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 
@@ -25,8 +21,6 @@ class BlogBloc extends Bloc<BlogEvent, BlogState> {
   FutureOr<void> blogInitialEvent(BlogInitialEvent event, Emitter<BlogState> emit) async {
     emit(BlogLoadingState());
     await Future.delayed(const Duration(seconds: 2));
-    List<BlogDataModel> blogList;
-    blogList = await GetData().getData();
     emit(BlogLoadedSuccessState());
   }
 

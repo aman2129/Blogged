@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
-import 'package:blog_app/views/blog_screens/drawer/bookmark_list_tile.dart';
 import 'package:meta/meta.dart';
 
 import '../../../../data_model/data_model.dart';
