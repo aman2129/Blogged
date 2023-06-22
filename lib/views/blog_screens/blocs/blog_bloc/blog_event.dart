@@ -8,12 +8,6 @@ class BlogInitialEvent extends BlogEvent {}
 class BlogNavigateToUploadViewEvent extends BlogEvent {}
 
 class BlogNavigateToDetailsViewEvent extends BlogEvent {
-  final String imageUrl;
-  final String title;
-  final String desc;
-
-  BlogNavigateToDetailsViewEvent(
-      {required this.imageUrl, required this.title, required this.desc});
 }
 
 class BlogDeleteButtonClickedEvent extends BlogEvent {}

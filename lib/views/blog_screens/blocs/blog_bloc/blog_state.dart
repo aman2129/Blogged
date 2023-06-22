@@ -16,7 +16,8 @@ class BlogErrorState extends BlogState{}
 
 class BlogNavigateToUploadViewActionState extends BlogActionState{}
 
-class BlogNavigateToDetailsViewActionState extends BlogActionState{}
+class BlogNavigateToDetailsViewActionState extends BlogActionState{
+}
 
 class BlogDeleteButtonClickedActionState extends BlogActionState{}
 

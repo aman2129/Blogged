@@ -30,6 +30,7 @@ class BlogBloc extends Bloc<BlogEvent, BlogState> {
 
   FutureOr<void> blogNavigateToDetailsViewEvent(BlogNavigateToDetailsViewEvent event, Emitter<BlogState> emit) {
     print("Clicked");
+
     emit(BlogNavigateToDetailsViewActionState());
   }
 
