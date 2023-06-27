@@ -11,10 +11,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:hive/hive.dart';
 import 'package:hive_flutter/adapters.dart';
-
-const primaryColor = Color(0xFF151026);
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

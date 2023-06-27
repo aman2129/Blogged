@@ -1,5 +1,4 @@
 import 'package:blog_app/views/blog_screens/animations/route_animation.dart';
-import 'package:blog_app/views/blog_screens/blog_home/blog_view.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_fonts/google_fonts.dart';
