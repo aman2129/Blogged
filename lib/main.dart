@@ -3,7 +3,6 @@ import 'package:blog_app/views/auth_screens/login_screen.dart';
 import 'package:blog_app/views/auth_screens/register_screen.dart';
 import 'package:blog_app/views/auth_screens/verify_email_view.dart';
 import 'package:blog_app/views/blog_screens/blocs/blog_bloc/blog_bloc.dart';
-import 'package:blog_app/views/blog_screens/blocs/bookmark_bloc/bookmark_bloc.dart';
 import 'package:blog_app/views/blog_screens/blocs/internet_bloc/internet_bloc.dart';
 import 'package:blog_app/views/blog_screens/blog_home/blog_view.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -27,9 +26,6 @@ void main() async {
         ),
         BlocProvider(
           create: (context) => InternetBloc(),
-        ),
-        BlocProvider(
-          create: (context) => BookmarkBloc(),
         ),
       ],
       child: MaterialApp(
